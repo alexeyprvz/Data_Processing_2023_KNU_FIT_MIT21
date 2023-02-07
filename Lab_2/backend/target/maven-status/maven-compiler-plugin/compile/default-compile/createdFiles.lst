@@ -1,0 +1,8 @@
+Crud\CrudFile.class
+FileIO\FileIOInterface.class
+Servlets\ServletConfig.class
+FileIO\FileIO.class
+Entity\Entity.class
+Servlets\ServletConfigInterface.class
+Crud\CrudInterface.class
+Servlets\Servlet.class
