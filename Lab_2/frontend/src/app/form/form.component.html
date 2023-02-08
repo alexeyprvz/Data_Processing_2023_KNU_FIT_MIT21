@@ -1,0 +1,30 @@
+<section>
+    <h1>Форма</h1>
+
+    <form class="doput">
+        <div class="inputs">
+            <div>
+                <input type="text" #name (keyup)="getName(name.value)" name="name" required class="input">
+                <label>Введіть назву</label>
+            </div>
+            <div>
+                <input type="text" #img (keyup)="getImg(img.value)" name="img" required class="input">
+                <label>Введіть назву файлу</label>
+            </div>
+            <div>
+                <input type="text" #type (keyup)="getType(type.value)" name="type" required class="input">
+                <label>Введіть тип</label>
+            </div>
+
+        </div>
+    </form>
+
+    <form #w="ngForm" (keyup)="getWeight(w)">
+        <div class="cell">      
+            <input type="number" name="weight" ngModel  required class="input">
+            <label>Введіть вагу</label>
+        </div>
+    </form>
+
+    <button (click)="OnClick()" >DoPut</button>
+</section>

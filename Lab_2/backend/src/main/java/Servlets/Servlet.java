@@ -29,7 +29,6 @@ public class Servlet extends HttpServlet {
     }
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        //Entity entity = new Entity("Бліндаж", "imgs/1.png");
 
         ArrayList<Entity> data = new ArrayList<Entity>();
         data.add(crud.readEntity());
@@ -47,7 +46,9 @@ public class Servlet extends HttpServlet {
 
         String name = request.getParameter("name");
         String img = request.getParameter("img");
+        String type = request.getParameter("type");
+        int weight = Integer.parseInt(request.getParameter("weight"));
 
-        crud.updateEntity(new Entity(name, img));
+        crud.updateEntity(new Entity(name, img, type, weight));
     }
 }
