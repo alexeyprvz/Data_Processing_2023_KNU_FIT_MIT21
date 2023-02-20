@@ -7,13 +7,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { ItemsComponent } from './items/items.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule }   from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemsComponent,
-    FormComponent
+    FormComponent,
+    HeaderComponent,
+    FooterComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
