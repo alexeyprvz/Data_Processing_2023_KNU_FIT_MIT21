@@ -1,0 +1,25 @@
+<div *ngIf="ent" class="update">
+    <h1>Оновити інформацію</h1>
+    <form class="doput">
+        <input type="hidden" [(ngModel)]="ent.id">
+        <div class="inputs">
+            <div class="input">
+                <input type="text" [(ngModel)]="ent.name" required class="input">
+                <label>Введіть назву</label>
+            </div>
+            <div class="input">
+                <input type="text" [(ngModel)]="ent.img" required class="input">
+                <label>Введіть назву файлу</label>
+            </div>
+            <div class="input">
+                <input type="text" [(ngModel)]="ent.type" required class="input">
+                <label>Введіть тип</label>
+            </div>
+            <div class="input">
+                <input type="number" [(ngModel)]="ent.weight" required class="input">
+                <label>Введіть вагу</label>
+            </div>
+        </div>
+        <button (click)="updateEntity()" >Оновити</button>
+    </form>
+</div>

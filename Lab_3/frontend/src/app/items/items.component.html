@@ -1,0 +1,42 @@
+<section class="items" id="items">
+    <div class="items-container">
+        <ul>
+            <li *ngFor="let ent of EntityList"
+            (click)="onSelect(ent)">
+                <img src="assets/{{ent.img}}" alt="">
+                <h3 class="i-title"><span>Назва: </span>{{ent.name}}</h3>
+                <div class="content">
+                    <p class="i-type"><span>Тип:</span> {{ent.type}}</p>
+                    <p class="i-type"><span>Вага:</span> {{ent.weight}} г</p>
+                </div>
+                <button (click)="deleteEntity(ent)"> X </button>             
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="add">
+    <h1 (click)="showAddForm=!showAddForm">Додати гранату</h1>
+    <form *ngIf="showAddForm" #form1="ngForm" (ngSubmit)="addEntity(form1.value)">
+        <input type="hidden" name="id" ngModel="-1">
+        <div class="input">
+            <input type="text" name="name" ngModel>
+            <label>Введіть назву</label>
+        </div>
+        <div class="input">
+            <input type="text" name="img" ngModel>
+            <label>Введіть назву файлу</label>
+        </div>
+        <div class="input">
+            <input type="text" name="type" ngModel>
+            <label>Введіть тип</label>
+        </div>
+        <div class="input">
+            <input type="number" name="weight" ngModel>
+            <label>Введіть вагу</label>
+        </div>
+        <input type="submit" value="Додати" class="add-button">
+    </form>
+</section>
+
+<app-form></app-form>
