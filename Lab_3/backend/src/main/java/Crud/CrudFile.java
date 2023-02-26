@@ -30,7 +30,8 @@ public class CrudFile implements CrudInterface{
         fio.saveToFile(entity);
     }
 
-    public static JsonElement bodyParse(HttpServletRequest request) {
+
+    public JsonElement bodyParse(HttpServletRequest request) {
         JsonElement jsonElement=null;
 
         try {
@@ -41,6 +42,7 @@ public class CrudFile implements CrudInterface{
 
         return jsonElement;
     }
+
 
     @Override
     public Entity grenadeParse(HttpServletRequest request) {
@@ -54,6 +56,7 @@ public class CrudFile implements CrudInterface{
         return grnd;
     }
 
+    @Override
     public int getNextId(List<Entity> list) {
         int maxId = 0;
 
@@ -65,6 +68,7 @@ public class CrudFile implements CrudInterface{
         return maxId+1;
     }
 
+    @Override
     public int getIndexByGrenadeId(int id, List<Entity> list) {
         int listId = id;
 

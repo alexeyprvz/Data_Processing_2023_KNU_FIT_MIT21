@@ -3,6 +3,8 @@ package Entity;
 import java.io.Serializable;
 
 public class Entity implements Serializable {
+
+    //private static final long serialVersionUID = 1L;
     private int id;
     private String name;
     private String img;
@@ -10,6 +12,7 @@ public class Entity implements Serializable {
     private int weight;
 
     public Entity(int id, String name, String img, String type, int weight) {
+        super();
         this.id = id;
         this.name = name;
         this.img = img;
@@ -20,10 +23,6 @@ public class Entity implements Serializable {
     public Entity() {
 
     }
-
-//    public Entity() {
-//
-//    }
 
     public void setId(int id) {
         this.id = id;
