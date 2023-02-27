@@ -1,5 +1,8 @@
 <div *ngIf="ent" class="update">
-    <h1>Оновити інформацію</h1>
+    <div class="title-and-button">
+        <h1>Оновити інформацію</h1>
+        <button (click)="closeSection()" class="close-btn"> X </button>
+    </div>
     <div class="doput">
         <input type="hidden" [(ngModel)]="ent.id">
         <div class="inputs">
@@ -13,11 +16,11 @@
             </div>
             <div class="input">
                 <input type="text" [(ngModel)]="ent.type" required class="input" value="ent.type">
-                <label>Введіть тип</label>
+                <label>Змініть тип</label>
             </div>
             <div class="input">
                 <input type="number" [(ngModel)]="ent.weight" required class="input" value="ent.weight">
-                <label>Введіть вагу</label>
+                <label>Змініть вагу</label>
             </div>
         </div>
         <button (click)="updateEntity()" >Оновити</button>

@@ -61,4 +61,8 @@ export class ItemsComponent implements OnInit {
     }
   }
 
+  closeUpdate(){
+    this.selectedEntity=undefined;
+  }
+
 }

@@ -18,7 +18,7 @@
 </section>
 
 <span id="update"></span>
-<app-form [ent]="selectedEntity" (updated)="updateEntities()" ></app-form>
+<app-form [ent]="selectedEntity" (updated)="updateEntities()" (close)="closeUpdate()" ></app-form>
 
 <section class="add">
     <h1 (click)="showAddForm=!showAddForm">Додати гранату</h1>

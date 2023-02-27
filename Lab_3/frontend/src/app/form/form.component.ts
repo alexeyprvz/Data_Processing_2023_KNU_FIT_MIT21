@@ -14,6 +14,7 @@ export class FormComponent{
 
   @Input() ent?:Entity
   @Output() updated:EventEmitter<null> = new EventEmitter();
+  @Output() close:EventEmitter<null> = new EventEmitter();
 
   updateEntity(){
     if(this.ent){
@@ -23,6 +24,11 @@ export class FormComponent{
         }
       )
     }
+  }
+
+  closeSection(){
+    this.ent=undefined;
+    this.close.emit();
   }
 
   // name:string = "";
