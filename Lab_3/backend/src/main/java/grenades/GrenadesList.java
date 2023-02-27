@@ -10,9 +10,9 @@ public class GrenadesList {
     private List<Entity> grenadesList = new ArrayList<>();
 
     public GrenadesList(){
-        this.grenadesList.add(new Entity(0, "Something1", "1.jpg", "Smtth1", 11));
-        this.grenadesList.add(new Entity(1, "Something2", "1.jpg", "Smtth2", 12));
-        this.grenadesList.add(new Entity(2, "Something3", "1.jpg", "Smtth3", 13));
+        this.grenadesList.add(new Entity(0, "Something1", "1", "Smtth1", 11));
+        this.grenadesList.add(new Entity(1, "Something2", "1", "Smtth2", 12));
+        this.grenadesList.add(new Entity(2, "Something3", "1", "Smtth3", 13));
     }
 
     public List<Entity> getGrenadesList() {

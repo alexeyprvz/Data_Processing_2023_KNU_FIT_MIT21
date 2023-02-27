@@ -8,69 +8,175 @@
     min-height: 100vh;
     margin-top: 5rem;
     margin-bottom: 5rem;
-    padding-top: 12vh;
+    padding-top: 1rem;
+    h1{
+        padding: 2rem;
+        padding-left: 3rem;
+        font-size: 3rem;
+        text-transform: uppercase;    
+    }
     .items-container{
         min-height: auto;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         padding: 1rem;
-        ul{
-            li{
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            margin: 1rem;
+            flex: 0 1 20rem;
+            box-shadow: $boxshadow;
+            background-color: $color3;
+            justify-content: space-between;
+            border-radius: 0.5rem;
+            width: 30%;
+            &:hover{
+                background-color: $color2;
+            }
+            h3{
+                background-color: $color4;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                span{
+                    color: $textcolor;
+                    background-color: $color5;
+                    padding: 0.3rem;
+                    border-radius: 0.5rem;
+                    margin: 0.2rem;
+                    font-weight: 900;
+                }
+            }
+            img{
+                margin-bottom: 0.7rem;
+                border-radius: 5%;
+                &:hover{
+                    box-shadow: $boxshadow;
+                    transform: scale(1.1);
+                    transition-duration: 0.3s;
+                    border-radius: 10%;
+                }
+            }
+            .content{
                 display: flex;
                 flex-direction: column;
+                justify-content: space-around;
                 align-items: center;
-                padding: 1rem;
-                margin: 1rem;
-                flex: 0 1 20rem;
-                box-shadow: $boxshadow;
-                background-color: $color3;
-                justify-content: space-between;
-                border-radius: 0.5rem;
-                width: 30%;
-                h3{
+                p{
                     background-color: $color4;
-                    padding: 0.5rem;
+                    padding: 0.3rem;
                     border-radius: 0.5rem;
+                    margin: 0.2rem;
                     span{
+                        font-weight: bolder;
                         color: $textcolor;
                         background-color: $color5;
                         padding: 0.3rem;
                         border-radius: 0.5rem;
                         margin: 0.2rem;
-                        font-weight: 900;
                     }
                 }
-                img{
-                    margin-bottom: 0.7rem;
-                    border-radius: 5%;
+            }
+            .buttons{
+                .update-btn{
+                    border: none;
+                    border-radius: 0.5rem;
+                    padding: 0.5rem;
+                    margin: 0.5rem;
+                    font-weight: bold;
+                    background-color: #e0dd00;
+                    font-size: 1.3rem;
                     &:hover{
-                        box-shadow: $boxshadow;
-                        transform: scale(1.2);
-                        border-radius: 20%;
+                        background-color: #6e5c41;
                     }
                 }
-                .content{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
-                    p{
-                        background-color: $color4;
-                        padding: 0.3rem;
-                        border-radius: 0.5rem;
-                        margin: 0.2rem;
-                        span{
-                            font-weight: bolder;
-                            color: $textcolor;
-                            background-color: $color5;
-                            padding: 0.3rem;
-                            border-radius: 0.5rem;
-                            margin: 0.2rem;
-                        }
+                .delete-btn{
+                    border: none;
+                    border-radius: 0.5rem;
+                    padding: 0.5rem;
+                    margin: 0.5rem;
+                    font-weight: bold;
+                    background-color: red;
+                    font-size: 1.3rem;
+                    &:hover{
+                        background-color: #700000;
                     }
                 }
             }
         }
+    }
+}
+
+.add{
+    h1{
+        margin: 1.5rem;
+        margin-top: 5rem;
+        margin-left: 3rem;
+        padding: 1rem;
+        font-size: 3rem;
+        text-transform: uppercase;
+        &:hover{
+            background-color: rgb(155, 122, 52);
+            border-radius: 3rem;
+        }    
+    }
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 3rem;
+    background-color: $color4;
+    min-height: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .add-button{
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            font-weight: bold;
+            background-color: $color3;
+            font-size: 1.3rem;
+            &:hover{
+                background-color: $color2;
+            }
+        }
+        .inputs{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 1rem;
+            .input{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+                margin: 1rem;
+                flex: 0 1 18rem;
+                box-shadow: $boxshadow;
+                background-color: $color3;
+                justify-content: space-between;
+                border-radius: 0.5rem;
+                width: 30%;
+                input{
+                    padding: 1rem;
+                    margin: 1rem;
+                    border-radius: 0.5rem;
+                    background-color: $color2;
+                    border: none;
+                    border-bottom: 3px solid $color4;
+                    width: 90%;
+                    max-height: 3rem;
+                    font-size: 1.5rem;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+        }    
     }
 }

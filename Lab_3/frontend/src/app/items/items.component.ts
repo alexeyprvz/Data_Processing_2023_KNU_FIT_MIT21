@@ -16,7 +16,7 @@ export class ItemsComponent implements OnInit {
   constructor(private service:ServiceService){}
 
   ngOnInit(): void {
-    this.updateEntities;
+    this.updateEntities();
     this.service.list.subscribe(
       (list:Entity[])=>{
         this.EntityList=list
@@ -53,6 +53,11 @@ export class ItemsComponent implements OnInit {
       this.selectedEntity=undefined
     } else{
       this.selectedEntity=ent
+        document.getElementById("update")?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "nearest"
+        });
     }
   }
 
