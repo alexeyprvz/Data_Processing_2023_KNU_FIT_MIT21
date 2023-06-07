@@ -1,8 +1,0 @@
-grenades\GrenadesList.class
-servlets\Servlet.class
-entity\GrndEntity.class
-jdbc\SqlCRUD.class
-jdbc\Connect.class
-jdbc\CRUDInterface.class
-crud\CrudFile.class
-jdbc\Main.class
